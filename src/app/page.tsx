@@ -1,69 +1,103 @@
-import Image from "next/image";
+import React from "react";
+import Link from "next/link";
+import { HeroSection } from "@/components/home/HeroSection";
+import { TrustBar } from "@/components/home/TrustBar";
+import { HowItWorksSection } from "@/components/home/HowItWorksSection";
+import { WhyChooseUsSection } from "@/components/home/WhyChooseUsSection";
+import { TestimonialsSection } from "@/components/home/TestimonialsSection";
+import { CtaBanner } from "@/components/home/CtaBanner";
+import { CategoryCard } from "@/components/categories/CategoryCard";
+import { FeaturedProductsCarousel } from "@/components/home/FeaturedProductsCarousel";
+import { CATEGORIES } from "@/data/categories";
+import { PRODUCTS, getFeaturedProducts } from "@/data/products";
+import { ArrowRight, Sparkles, Flame } from "lucide-react";
 
-export default function Home() {
+import { Button } from "@/components/ui/Button";
+
+export default function HomePage() {
+  const featuredCategories = CATEGORIES.filter((c) => c.featured);
+  const featuredProducts = getFeaturedProducts();
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div className="space-y-0">
+      <HeroSection />
+      <TrustBar />
+
+      {/* Categorias em Destaque */}
+      <section className="py-16 sm:py-24 bg-white border-b border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+            <div className="space-y-2">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-50 border border-accent/20">
+                <span className="w-2 h-2 rounded-full bg-accent" />
+                <span className="text-[11px] font-black uppercase tracking-wider text-accent">
+                  Nosso Catálogo
+                </span>
+              </div>
+              <h2 className="text-2xl sm:text-4xl font-black text-dark tracking-tight uppercase">
+                Escolha o que você procura por categoria
+              </h2>
+              <p className="text-sm sm:text-base text-dark-muted font-normal">
+                Clique na categoria desejada para ver todos os modelos, cores e formatos disponíveis.
+              </p>
+            </div>
+
+            <Link
+              href="/categorias"
+              className="inline-flex items-center gap-1.5 font-black uppercase tracking-wider text-xs text-accent hover:underline shrink-0"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              <span>Ver todas as 15 categorias</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featuredCategories.map((cat) => {
+              const count = PRODUCTS.filter((p) => p.categoryId === cat.id).length;
+              return <CategoryCard key={cat.id} category={cat} itemCount={count} />;
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Mais Vendidos e Destaques da Semana */}
+      <section className="py-16 sm:py-24 bg-ice border-b border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+            <div className="space-y-2">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-primary/20">
+                <Flame className="w-3.5 h-3.5 fill-primary text-primary" />
+                <span className="text-[11px] font-black uppercase tracking-wider text-primary">
+                  Os Favoritos para Festas
+                </span>
+              </div>
+              <h2 className="text-2xl sm:text-4xl font-black text-dark tracking-tight uppercase">
+                Mais Vendidos & Destaques da Semana
+              </h2>
+              <p className="text-sm sm:text-base text-dark-muted font-normal">
+                Os itens mais pedidos por confeiteiras e decoradores em nossa loja.
+              </p>
+            </div>
+
+            <Button
+              href="/produtos"
+              variant="accent"
+              size="md"
+              icon={<Sparkles className="w-4 h-4" />}
+              className="shrink-0 uppercase text-xs tracking-wider"
             >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              Ver Catálogo Completo
+            </Button>
+          </div>
+
+          <FeaturedProductsCarousel products={featuredProducts} />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </section>
+
+      <HowItWorksSection />
+      <WhyChooseUsSection />
+      <TestimonialsSection />
+      <CtaBanner />
     </div>
   );
 }
