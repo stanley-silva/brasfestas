@@ -1,74 +1,66 @@
-# BrasFestas — Catálogo Digital & E-commerce
+# BrasFestas — E-Commerce & Digital Catalog
 
-> Catálogo digital e plataforma de conversão para a **BrasFestas**, loja especializada em artigos para festas, confeitaria, embalagens, descartáveis e personalizados DTF UV, localizada em Santana, São Paulo/SP.
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Zustand](https://img.shields.io/badge/Zustand-State-orange?style=flat-square)](https://github.com/pmndrs/zustand)
 
----
-
-## 🚀 Sobre o Projeto
-
-O projeto foi construído com foco em **alta conversão via WhatsApp**, experiência visual envolvente, velocidade de carregamento e identidade visual proprietária (paleta oficial com destaque em Rosa `#FF3D68`, Laranja `#FF8C32`, Grafite `#2A2A2A` e Branco Gelo).
-
-### Principais Recursos
-- **Catálogo Interativo Completo:** 15 departamentos oficiais com fotos de produtos representativas e navegação estruturada.
-- **Busca Dinâmica em Tempo Real:** Campo de busca com autocompletar e resultados ao vivo conforme o usuário digita.
-- **Carrossel Horizontal de Linha Única:** Seção de *Mais Vendidos* com no máximo 4 produtos simultâneos no desktop, setas de navegação lateral dedicadas e indicadores em bolinhas (dots) paginados.
-- **Sacola de Compras & Fechamento no WhatsApp:** Gerenciamento de estado de sacola com cálculo de totais, seleção de variações e montagem de mensagem formatada para envio direto ao WhatsApp da loja.
-- **Compra Direta por Produto:** Botão de contato imediato para cada item no catálogo com mensagem pré-preenchida contendo nome, SKU, preço e variação.
-- **Diferenciais Comerciais (Por que comemorar com a BrasFestas):** Seção limpa e moderna com os 6 pilares de valor da marca.
-- **Totalmente Responsivo:** Layout adaptável para smartphones, tablets e desktops.
+A high-performance digital catalog and direct-to-WhatsApp e-commerce platform developed for **BrasFestas**, a party supplies, packaging, confectionery, and custom DTF UV printing brand based in São Paulo, Brazil.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## ⚡ Overview & Features
 
-- **Framework:** [Next.js](https://nextjs.org/) (App Router & Turbopack)
-- **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
-- **Estilização:** [Tailwind CSS](https://tailwindcss.com/) com design system centralizado via variáveis CSS em `src/app/globals.css`
-- **Gerenciamento de Estado:** [Zustand](https://github.com/pmndrs/zustand) (com persistência de sacola no `localStorage`)
-- **Ícones:** [Lucide React](https://lucide.dev/)
-- **Efeitos Visuais:** [Canvas Confetti](https://www.npmjs.com/package/canvas-confetti)
-- **Tipografia:** [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) via `next/font`
+- **Interactive Product Catalog**: Comprehensive departmental navigation across 15 categories with category-level filtering and product search.
+- **Real-Time Search**: Instant search with typeahead autocompletion and dynamic product matching.
+- **Featured Product Showcase**: Optimized single-row carousel with dedicated navigation controls and pagination indicators.
+- **WhatsApp Order Pipeline**: Persistent shopping bag (`localStorage`) with dynamic order formatting for direct WhatsApp checkout.
+- **Design System & Performance**: Custom brand theme with Tailwind CSS, responsive layouts, Next.js image optimization, and full TypeScript type safety.
 
 ---
 
-## 📁 Estrutura de Pastas
+## 🛠️ Tech Stack
 
-```
+- **Framework**: [Next.js](https://nextjs.org/) (App Router, Turbopack)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) + Custom CSS Design Tokens
+- **State Management**: [Zustand](https://github.com/pmndrs/zustand)
+- **Icons & UI**: [Lucide React](https://lucide.dev/), [Canvas Confetti](https://www.npmjs.com/package/canvas-confetti)
+- **Typography**: [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) via `next/font`
+
+---
+
+## 📂 Project Structure
+
+```text
 brasfestas/
-├── docs/                     # Documentação de apoio e referências visuais
 ├── public/
 │   ├── images/
-│   │   ├── banners/          # Banners promocionais e hero section
-│   │   ├── categories/       # Fotos das 15 categorias oficiais
-│   │   └── products/         # Imagens oficiais dos produtos em formato .webp
+│   │   ├── categories/       # Category banners & departmental assets
+│   │   └── products/         # Product catalog photography (.webp)
 │   └── logo-brasfestas-horizontal.png
 ├── src/
-│   ├── app/                  # Rotas do Next.js (App Router)
-│   │   ├── categorias/       # Listagem geral e página dinâmica por categoria ([slug])
-│   │   ├── contato/          # Informações de contato e localização da loja física
-│   │   ├── produtos/         # Catálogo completo com filtros e página de detalhe ([slug])
-│   │   ├── sobre/            # Página institucional da marca
-│   │   ├── globals.css       # Design tokens, variáveis de cores e regras globais
-│   │   ├── layout.tsx        # Shell da aplicação (TopBar, Navbar, Footer, CartSheet)
-│   │   └── page.tsx          # Página inicial (Home)
-│   ├── components/
-│   │   ├── cart/             # Drawer da sacola de compras (CartSheet)
-│   │   ├── categories/       # Cards de categorias
-│   │   ├── home/             # Seções da página inicial (Hero, Carrossel, Diferenciais, etc.)
-│   │   ├── layout/           # Componentes estruturais (Navbar, TopBar, Footer, Logo)
-│   │   ├── products/         # Cards e listagens de produtos
-│   │   └── ui/               # Primitivas reutilizáveis (Button, Badge, Breadcrumbs, etc.)
-│   ├── data/                 # Bases de dados locais tipadas (categorias, produtos, dados da loja)
-│   ├── lib/                  # Utilitários e gerador de links formatados para WhatsApp
-│   └── store/                # Estado global da sacola de compras (Zustand)
-└── .env.example              # Modelo de variáveis de ambiente
+│   ├── app/                  # Next.js App Router (pages & global layouts)
+│   ├── components/           # Modular UI components (cart, home, layout, products)
+│   ├── data/                 # Strongly-typed product and category datasets
+│   ├── lib/                  # Helper utilities and WhatsApp link builders
+│   └── store/                # Zustand global state stores
+└── .env.example              # Environment variables template
 ```
 
 ---
 
-## ⚙️ Variáveis de Ambiente
+## 🚀 Quickstart
 
-Crie um arquivo `.env.local` na raiz do projeto com base no `.env.example`:
+### 1. Installation
+
+```bash
+npm install
+```
+
+### 2. Environment Setup
+
+Copy `.env.example` to `.env.local` and configure your store settings:
 
 ```env
 NEXT_PUBLIC_WHATSAPP_NUMBER=5547992840652
@@ -79,53 +71,31 @@ NEXT_PUBLIC_STORE_ADDRESS=Avenida Imirim, 2000, Santana, São Paulo/SP
 NEXT_PUBLIC_STORE_CEP=02464-300
 ```
 
----
+### 3. Development Server
 
-## 💻 Como Executar o Projeto
-
-### Pré-requisitos
-- Node.js 18.17 ou superior
-- Gerenciador de pacotes `npm` (ou `pnpm` / `yarn`)
-
-### 1. Instalar dependências
-```bash
-npm install
-```
-
-### 2. Rodar o servidor de desenvolvimento
 ```bash
 npm run dev
 ```
-Acesse [http://localhost:3000](http://localhost:3000) no navegador.
 
-### 3. Validação de tipos e lint
+The application will be available at `http://localhost:3000`.
+
+---
+
+## 🔧 Build & Code Quality
+
 ```bash
-# Checagem de tipos com TypeScript
+# Type checking
 npx tsc --noEmit
 
-# Verificação de lint com ESLint
+# Linting
 npm run lint
-```
 
-### 4. Build de produção
-```bash
+# Production build
 npm run build
-npm run start
 ```
 
 ---
 
-## ☁️ Deploy na Vercel
+## 📄 License
 
-O projeto está otimizado para deploy instantâneo na **Vercel**:
-
-1. Crie um novo projeto na Vercel e importe o repositório Git.
-2. O framework preset será detectado automaticamente como **Next.js**.
-3. Configure as variáveis de ambiente presentes no `.env.example` nas configurações do projeto na Vercel.
-4. Clique em **Deploy**.
-
----
-
-## 📄 Licença
-
-Este projeto é de uso exclusivo da marca **BrasFestas**. Todos os direitos reservados.
+Proprietary. All rights reserved by **BrasFestas**.
