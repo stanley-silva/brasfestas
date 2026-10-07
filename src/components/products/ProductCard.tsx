@@ -48,24 +48,29 @@ export function ProductCard({ product }: ProductCardProps) {
 
   return (
     <div className="group relative bg-white rounded-3xl border-2 border-pink-100/70 hover:border-accent hover:shadow-xl hover:shadow-accent/10 transition-all duration-300 flex flex-col overflow-hidden">
-      {/* Product Image Container */}
-      <Link href={`/produtos/${product.slug}`} className="relative aspect-square overflow-hidden bg-pink-50/40 block">
-        <Image
-          src={product.images[0]}
-          alt={product.name}
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
-        />
+      {/* Product Image Container with pure white background */}
+      <Link
+        href={`/produtos/${product.slug}`}
+        className="relative aspect-square overflow-hidden bg-white block p-4 sm:p-5 m-2.5 rounded-2xl"
+      >
+        <div className="relative w-full h-full flex items-center justify-center">
+          <Image
+            src={product.images[0]}
+            alt={product.name}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+          />
+        </div>
 
         {/* Badges / Dark Pills */}
-        <div className="absolute top-3 left-3 flex flex-col gap-1.5 z-10">
+        <div className="absolute top-2.5 left-2.5 flex flex-col gap-1.5 z-10 pointer-events-none">
           {product.tags.map((tag) => {
             const isBestSeller = tag === "Mais Vendido";
             return (
               <span
                 key={tag}
-                className={`px-3 py-0.5 text-[10px] font-black uppercase tracking-wider rounded-full shadow-xs ${
+                className={`px-2.5 py-0.5 text-[9px] font-black uppercase tracking-wider rounded-full shadow-xs ${
                   isBestSeller
                     ? "bg-accent text-white"
                     : "bg-dark/90 backdrop-blur-xs text-white"
@@ -78,7 +83,7 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
 
         {/* Hover quick action overlay */}
-        <div className="absolute inset-0 bg-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 p-4">
+        <div className="absolute inset-0 bg-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 rounded-2xl">
           <span className="p-3 rounded-full bg-white text-dark shadow-lg hover:bg-accent hover:text-white transition-colors">
             <Eye className="w-5 h-5" />
           </span>

@@ -92,15 +92,17 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
             {/* Gallery Column */}
             <div className="lg:col-span-6 space-y-4">
               {/* Main Image */}
-              <div className="relative aspect-square rounded-2xl overflow-hidden bg-ice border border-slate-100">
-                <Image
-                  src={product.images[selectedImage] || product.images[0]}
-                  alt={product.name}
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
+              <div className="relative aspect-square rounded-2xl overflow-hidden bg-white border border-slate-100 p-6 sm:p-10 flex items-center justify-center">
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <Image
+                    src={product.images[selectedImage] || product.images[0]}
+                    alt={product.name}
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-contain p-2"
+                  />
+                </div>
 
                 {/* Badges */}
                 <div className="absolute top-4 left-4 flex flex-col gap-1.5 z-10">

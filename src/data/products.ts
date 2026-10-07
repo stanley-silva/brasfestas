@@ -125,7 +125,7 @@ export const PRODUCTS: Product[] = [
     description: "Deixe sua festa de Halloween ainda mais temática com esta\nbandeja em formato de morcego! Com acabamento preto\nbrilhante e design diferenciado, é ideal para servir doces,\nbalas e guloseimas ou complementar a decoração da sua\nmesa temática.\nMedidas: 24 x 15 cm\nCor: Preto\nFormato: Morcego\nValor: R$ 10,90",
     shortDescription: "Deixe sua festa de Halloween ainda mais temática com esta",
     images: [
-      "/images/products/bandeja-morcego-preta-para-halloween.webp",
+      "/images/products/bandeja-morcego-preta-para-halloween-v2.webp",
     ],
     tags: ["Pronta Entrega"],
   },
@@ -140,7 +140,7 @@ export const PRODUCTS: Product[] = [
     description: "Deixe sua decoração de Halloween ainda mais criativa com esta bandeja\nem formato de casa assombrada! Na cor laranja vibrante, é perfeita para\nservir doces, balas e guloseimas ou decorar sua mesa temática com muito",
     shortDescription: "Deixe sua decoração de Halloween ainda mais criativa com esta bandeja",
     images: [
-      "/images/products/bandeja-casinha-assombrada-para-halloween.webp",
+      "/images/products/bandeja-casinha-assombrada-para-halloween-v2.webp",
     ],
     tags: ["Pronta Entrega"],
   },
@@ -169,7 +169,7 @@ export const PRODUCTS: Product[] = [
     description: "Deixe sua decoração de Halloween ainda mais criativa com esta\nbandeja em formato de teia de aranha! Na cor roxa, possui detalhes de",
     shortDescription: "Deixe sua decoração de Halloween ainda mais criativa com esta",
     images: [
-      "/images/products/bandeja-teia-de-aranha-roxa-para-halloween.webp",
+      "/images/products/bandeja-teia-de-aranha-roxa-para-halloween-v3.webp",
     ],
     tags: ["Pronta Entrega"],
   },
@@ -658,7 +658,7 @@ export const PRODUCTS: Product[] = [
     description: "Prepare uma surpresa inesquecível para o chá revelação com nosso Balão Revelação\npersonalizado!\nO balão é montado para criar um momento especial e cheio de emoção. Ele é inflado com gás\nhélio e possui uma base de chão, permitindo que fique suspenso durante a decoração e o\nmomento da revelação.\nDentro do balão principal são colocados confetes e pequenos balões nas cores da revelação,\nque serão liberados no momento escolhido, criando um efeito lindo e especial para fotos e\nvídeos.\nDetalhes do produto:\nBalão principal para revelação\nInflado com gás hélio\nBase de chão para manter o balão suspenso\nDentro do balão são colocados confetes\nPequenos balões nas cores escolhidas para a revelação\nMontagem preparada para o momento da revelação\nIdeal para chá revelação e comemorações especiais\nValor: R$ 219,00\nAs cores e detalhes da montagem são definidos de acordo com a necessidade do cliente.",
     shortDescription: "Prepare uma surpresa inesquecível para o chá revelação com nosso Balão Revelação",
     images: [
-      "/images/products/balao-revelacao-com-gas-helio.webp",
+      "/images/products/balao-revelacao-com-gas-helio-v2.webp",
     ],
     tags: ["Mais Vendido", "Pronta Entrega"],
     featured: true,
@@ -706,7 +706,7 @@ export const PRODUCTS: Product[] = [
     description: "Prático e versátil, o Garfo de Sobremesa\nPrafesta é ideal para servir bolos, tortas, doces,\nmousses, sorvetes e outras sobremesas em\nfestas, eventos e comemorações.\nFabricado em plástico, possui tamanho\nadequado para sobremesas e é uma opção\nprática para facilitar o serviço e a organização\nda sua festa.\nInformações do produto:\nQuantidade: 50 unidades por pacote\nMedida: 12,5 cm de comprimento x 2,1 cm de\nlargura\nMaterial: plástico\nMarca: Prafesta\nCores: disponíveis em diversas opções,\nconforme disponibilidade\nValor: R$ 4,90 o pacote\nIdeal para aniversários, festas infantis,\ncasamentos, eventos, confraternizações e uso\nem sobremesas.",
     shortDescription: "Prático e versátil, o Garfo de Sobremesa",
     images: [
-      "/images/products/garfo-de-sobremesa-descartavel-prafesta.webp",
+      "/images/products/garfo-de-sobremesa-descartavel-prafesta-v2.webp",
     ],
     tags: ["Pronta Entrega"],
   },
@@ -1232,7 +1232,7 @@ export const PRODUCTS: Product[] = [
     description: "Velas com a palavra “Parabéns”, perfeitas para decorar o\nbolo e deixar a comemoração ainda mais especial.\nDisponível em diversas cores.\nValor: R$ 19,90",
     shortDescription: "Velas com a palavra “Parabéns”, perfeitas para decorar o",
     images: [
-      "/images/products/vela-parabens-8-unidades.webp",
+      "/images/products/vela-parabens-8-unidades-v2.webp",
     ],
     tags: ["Pronta Entrega"],
   },
@@ -1246,7 +1246,7 @@ export const PRODUCTS: Product[] = [
     description: "Velas em formato de números, perfeitas para\ndecorar o bolo e comemorar cada idade de forma\nespecial. Disponível do 0 ao 9, em diversas cores.\nValor: R$ 6,90",
     shortDescription: "Velas em formato de números, perfeitas para",
     images: [
-      "/images/products/vela-numero-1-unidade.webp",
+      "/images/products/vela-numero-1-unidade-v2.webp",
     ],
     tags: ["Pronta Entrega"],
   },
@@ -1260,7 +1260,7 @@ export const PRODUCTS: Product[] = [
     description: "Velas em formato de números com acabamento em\nglitter, perfeitas para decorar bolos e deixar a\ncomemoração ainda mais especial. Disponível do 0 ao 9,\nem diversas cores.\nValor: R$ 7,90",
     shortDescription: "Velas em formato de números com acabamento em",
     images: [
-      "/images/products/vela-numero-com-glitter-1-unidade.webp",
+      "/images/products/vela-numero-com-glitter-1-unidade-v2.webp",
     ],
     tags: ["Pronta Entrega"],
   },
