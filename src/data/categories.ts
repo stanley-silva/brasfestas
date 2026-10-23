@@ -128,6 +128,15 @@ export const CATEGORIES: Category[] = [
     image: "/images/categories/vasos-e-flores.jpg",
   },
   {
+    id: "festas-tematicas",
+    name: "Festas Temáticas",
+    slug: "festas-tematicas",
+    description: "Kits decorativos, painéis, velas e artigos para aniversários e temas infantis.",
+    iconName: "PartyPopper",
+    image: "/images/categories/festas-tematicas.jpg",
+    featured: true,
+  },
+  {
     id: "velas",
     name: "Velas de Aniversário",
     slug: "velas",
