@@ -15,7 +15,7 @@ export const CATEGORIES: Category[] = [
     slug: "baloes",
     description: "Balões de látex, metalizados, candy color, temáticos, além de varetas e suportes para montagem e fixação.",
     iconName: "CircleDot",
-    image: "/images/categories/baloes.jpg",
+    image: "/images/categories/bal_es_e_bexigas.webp",
     featured: true,
   },
   {
@@ -24,7 +24,7 @@ export const CATEGORIES: Category[] = [
     slug: "bandejas-e-suportes",
     description: "Bandejas decorativas, boleiras, suportes de doces em acrílico e MDF.",
     iconName: "Layers",
-    image: "/images/categories/bandejas-suportes.jpg",
+    image: "/images/categories/bandejas_e_boleiras.webp",
     featured: true,
   },
   {
@@ -33,7 +33,7 @@ export const CATEGORIES: Category[] = [
     slug: "confeitaria",
     description: "Corantes em gel, pós decorativos, confeitos e acessórios culinários.",
     iconName: "CakeSlice",
-    image: "/images/categories/confeitaria.jpg",
+    image: "/images/categories/confeitaria.webp",
     featured: true,
   },
   {
@@ -58,7 +58,7 @@ export const CATEGORIES: Category[] = [
     slug: "decoracao",
     description: "Cortinas metalizadas, faixas decorativas, saias de mesa, toalhas em TNT e artigos para ambientação de festas.",
     iconName: "Sparkles",
-    image: "/images/categories/decoracao.jpg",
+    image: "/images/categories/decora_o.webp",
     featured: true,
   },
   {
@@ -84,7 +84,7 @@ export const CATEGORIES: Category[] = [
     slug: "embalagens",
     description: "Caixas de presente, laços prontos, fitas decorativas e sacolas.",
     iconName: "Package",
-    image: "/images/categories/embalagens.jpg",
+    image: "/images/categories/embalagens_e_caixasv2.webp",
     featured: true,
   },
   {
