@@ -11,20 +11,12 @@ export interface Category {
 export const CATEGORIES: Category[] = [
   {
     id: "baloes",
-    name: "Balões e Bexigas",
+    name: "Balões e Acessórios",
     slug: "baloes",
-    description: "Balões de látex, metalizados, candy color e temáticos.",
+    description: "Balões de látex, metalizados, candy color, temáticos, além de varetas e suportes para montagem e fixação.",
     iconName: "CircleDot",
     image: "/images/categories/baloes.jpg",
     featured: true,
-  },
-  {
-    id: "varetas-acessorios",
-    name: "Varetas e Suportes para Balão",
-    slug: "varetas-e-acessorios",
-    description: "Varetas pega-balão, suportes de chão e pontos de fixação.",
-    iconName: "Maximize2",
-    image: "/images/categories/varetas-e-acessorios.jpg",
   },
   {
     id: "bandejas-suportes",
@@ -61,12 +53,12 @@ export const CATEGORIES: Category[] = [
     image: "/images/categories/descartaveis.jpg",
   },
   {
-    id: "decoracao-bolos",
-    name: "Decoração e Topos de Bolo",
-    slug: "decoracao-e-topos-de-bolo",
-    description: "Topos de bolo em acrílico, papelaria personalizada e apliques.",
+    id: "decoracao",
+    name: "Decoração",
+    slug: "decoracao",
+    description: "Cortinas metalizadas, faixas decorativas, saias de mesa, toalhas em TNT e artigos para ambientação de festas.",
     iconName: "Sparkles",
-    image: "/images/categories/decoracao-e-topos-de-bolo.jpg",
+    image: "/images/categories/decoracao.jpg",
     featured: true,
   },
   {
@@ -137,11 +129,11 @@ export const CATEGORIES: Category[] = [
     featured: true,
   },
   {
-    id: "velas",
-    name: "Velas de Aniversário",
-    slug: "velas",
-    description: "Velas numerais, estrelinhas de faísca, velas mágicas e decoradas.",
+    id: "velas-e-topos-de-bolo",
+    name: "Velas e Topos de bolo",
+    slug: "velas-e-topos-de-bolo",
+    description: "Velas numerais, velas decorativas, faíscas e topos de bolo temáticos e personalizados para aniversários.",
     iconName: "Flame",
-    image: "/images/categories/velas.jpg",
+    image: "/images/categories/velas-e-topos-de-bolo.jpg",
   },
 ];

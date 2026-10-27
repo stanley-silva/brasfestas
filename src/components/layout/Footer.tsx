@@ -36,7 +36,7 @@ export function Footer() {
             <ul className="space-y-2 text-xs sm:text-sm text-slate-400">
               <li>
                 <Link href="/categorias/baloes" className="hover:text-accent transition-colors">
-                  Balões e Bexigas
+                  Balões e Acessórios
                 </Link>
               </li>
               <li>
@@ -45,8 +45,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/categorias/decoracao-e-topos-de-bolo" className="hover:text-accent transition-colors">
-                  Topos de Bolo
+                <Link href="/categorias/decoracao" className="hover:text-accent transition-colors">
+                  Decoração
                 </Link>
               </li>
               <li>
